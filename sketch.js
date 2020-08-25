@@ -1,13 +1,16 @@
+let octahedron;
+
+function preload() {
+  octahedron = loadModel('assets/octahedron.obj');
+}
+
 function setup() {
-  createCanvas(displayWidth, displayHeight);
+  createCanvas(displayWidth, displayHeight, WEBGL);
 }
 
 function draw() {
-  if (mouseIsPressed) {
-    fill(0);
-  } else {
-    fill(255);
-  }
-  
-  ellipse(mouseX, mouseY, 80, 80);
+   background(200);
+  rotateX(frameCount * 0.01);
+  rotateY(frameCount * 0.01);
+  model(octahedron);
 }
