@@ -7,7 +7,7 @@ function preload() {
 function setup() {
   createCanvas(displayWidth, displayHeight, WEBGL);
   background('rgba(0,255,0, 0.25)');
-  ortho( far);
+
 }
 
 function draw() {
@@ -19,6 +19,6 @@ function draw() {
    rotateY(frameCount * 0.01);
   rotateY(mouseX/1000);
   scale(displayWidth/6);
-   //normalMaterial();
+   normalMaterial();
   model(line);
 }
