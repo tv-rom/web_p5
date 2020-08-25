@@ -1,18 +1,24 @@
 let line;
 
 function preload() {
-  line = loadModel('wavyline.obj');
+  line = loadModel('af.obj');
 }
 
 function setup() {
   createCanvas(displayWidth, displayHeight, WEBGL);
+  background('rgba(0,255,0, 0.25)');
+  ortho( far);
 }
 
 function draw() {
-   background(200);
-  rotateX(mouseX/100);
-  rotateY(mouseY/100);
-  scale(24);
-   normalMaterial();
+
+  orbitControl();
+
+
+  rotateX(frameCount * 0.01);
+   rotateY(frameCount * 0.01);
+  rotateY(mouseX/1000);
+  scale(displayWidth/6);
+   //normalMaterial();
   model(line);
 }
