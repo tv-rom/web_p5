@@ -10,8 +10,8 @@ function setup() {
 
 function draw() {
    background(200);
-  rotateX(mouseX/10);
-  rotateY(mouseY/10);
+  rotateX(mouseX/100);
+  rotateY(mouseY/100);
   scale(24);
    normalMaterial();
   model(line);
