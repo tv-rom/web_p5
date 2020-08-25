@@ -1,4 +1,4 @@
-let octahedron;
+let line;
 
 function preload() {
   line = loadModel('wavyline.obj');
