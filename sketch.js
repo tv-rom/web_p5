@@ -1,7 +1,7 @@
 let line;
 
 function preload() {
-  line = loadModel('af.obj');
+  line = loadModel('af2.obj');
 }
 
 function setup() {
